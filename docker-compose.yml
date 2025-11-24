@@ -188,9 +188,7 @@ services:
 #      - "8084:8084"
 #    environment:
 #      SERVER_PORT: 8084
-#      KAFKA_BROKER: kafka:9092
-#      KAFKA_REPLICAS: 1
-#      KAFKA_PARTITIONS: 3
+#      KAFKA_BROKERS: kafka:9092
 #      GRAYLOG_HOST: graylog
 #      GRAYLOG_PORT: 12201
 #    depends_on:
@@ -202,7 +200,11 @@ services:
 #        condition: service_started
 #      zookeeper:
 #        condition: service_healthy
-#      kafka:
+#      kafka1:
+#        condition: service_healthy
+#      kafka2:
+#        condition: service_healthy
+#      kafka3:
 #        condition: service_healthy
 #    networks:
 #      - vekrest-network
