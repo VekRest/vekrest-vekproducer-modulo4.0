@@ -100,6 +100,7 @@ services:
     restart: on-failure
     ports:
       - "9092:9092"
+      - "19092:19092"
     environment:
       KAFKA_BROKER_ID: 1
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
@@ -129,6 +130,7 @@ services:
     restart: on-failure
     ports:
       - "9093:9093"
+      - "19093:19093"
     environment:
       KAFKA_BROKER_ID: 2
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
@@ -158,6 +160,7 @@ services:
     restart: on-failure
     ports:
       - "9094:9094"
+      - "19094:19094"
     environment:
       KAFKA_BROKER_ID: 3
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
