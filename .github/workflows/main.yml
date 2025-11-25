@@ -3,6 +3,8 @@ name: VekProducer CI/CD Workflow
 on:
   push:
     tags: ['v*', 'v*.*', 'v*.*.*']
+  workflow_dispatch:
+    
 
 jobs:
   ci:
