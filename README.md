@@ -21,7 +21,7 @@ Producer VekRest: producer kafka via Spring Boot com Docker e Maven. **Módulo 4
 
 > A imagem desta aplicação é atualizada a cada nova tag ou pull request na [branch main](https://github.com/VekRest/vekrest-vekproducer-modulo4/tree/main)
 
-> Link da imagem no DockerHub: [vek03/vekrest-vekproducer:latest](https://hub.docker.com/repository/docker/vek03/vekrest-vekproducer)
+> Link da imagem no DockerHub: [vek03/vekrest-vekproducer:latest](https://hub.docker.com/r/vek03/vekrest-vekproducer)
 
 > Utilize 3 containers Kafka para alta disponibilidade (kafka1, kafka2 e kafka3), um para cada Broker. Cada Broker possui 5 partições e 2 réplicas.
 
@@ -29,13 +29,15 @@ Producer VekRest: producer kafka via Spring Boot com Docker e Maven. **Módulo 4
 
 ## 1.1 🧩 Containers necessários para rodar a aplicação:
 
-| Container  | Imagem                               | Link                                                                                                                                           | 
-|------------|--------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
-| MongoDB    | `mongo:latest`                       | https://hub.docker.com/_/mongo                                                                                                                 |
-| OpenSearch | `opensearchproject/opensearch:2.4.0` | https://hub.docker.com/layers/opensearchproject/opensearch/2.4.0/images/sha256-c8681472b70d46e7de61fe770d288a972f84b3f122f3c74ca06ea525264b6fd5 |
-| Graylog    | `graylog/graylog:5.1.5`              | https://hub.docker.com/layers/graylog/graylog/5.1.5/images/sha256-3b6967572e88731eacfa661e6d7ca41da3e259bc5eb041e58fb10e4deb823dcb             |
-| Zookeeper  | `confluentinc/cp-zookeeper:7.5.0`    | https://hub.docker.com/layers/confluentinc/cp-zookeeper/7.5.0/images/sha256-d18e7b3a81326dd278a5f2121b29a7f009582e0b0f5552165eb5efc83533a52b |
-| Kafka      | `confluentinc/cp-kafka:7.5.0`        | https://hub.docker.com/layers/confluentinc/cp-kafka/7.5.0/images/sha256-69022c46b7f4166ecf21689ab4c20d030b0a62f2d744c20633abfc7c0040fa80 |
+| Container      | Imagem                               | Link                                                                                                                                           | 
+|----------------|--------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
+| MongoDB        | `mongo:latest`                       | https://hub.docker.com/_/mongo                                                                                                                 |
+| OpenSearch     | `opensearchproject/opensearch:2.4.0` | https://hub.docker.com/layers/opensearchproject/opensearch/2.4.0/images/sha256-c8681472b70d46e7de61fe770d288a972f84b3f122f3c74ca06ea525264b6fd5|
+| Graylog        | `graylog/graylog:5.1.5`              | https://hub.docker.com/layers/graylog/graylog/5.1.5/images/sha256-3b6967572e88731eacfa661e6d7ca41da3e259bc5eb041e58fb10e4deb823dcb             |
+| Zookeeper      | `confluentinc/cp-zookeeper:7.5.0`    | https://hub.docker.com/layers/confluentinc/cp-zookeeper/7.5.0/images/sha256-d18e7b3a81326dd278a5f2121b29a7f009582e0b0f5552165eb5efc83533a52b   |
+| Kafka          | `confluentinc/cp-kafka:7.5.0`        | https://hub.docker.com/layers/confluentinc/cp-kafka/7.5.0/images/sha256-69022c46b7f4166ecf21689ab4c20d030b0a62f2d744c20633abfc7c0040fa80       |
+| VekConsumer    | `vek03/vekrest-vekconsumer`          | https://hub.docker.com/r/vek03/vekrest-vekconsumer                                                                                             |
+| VekConsumerAPI | `vek03/vekrest-vekconsumer`          | https://hub.docker.com/r/vek03/vekrest-vekconsumerapi                                                                                          |
 
 ---
 
@@ -309,7 +311,7 @@ git tag <version>
 git push origin <version>
 ```
 
-[![VekProducer CI/CD Workflow](https://github.com/VekRest/vekrest-vekproducer-modulo4/actions/workflows/main.yml/badge.svg)](https://github.com/VekRest/vekrest-vekproducer-modulo4/actions/workflows/main.yml)
+[![VekProducer CI/CD Workflow](https://github.com/VekRest/vekrest-vekproducer-modulo4.0/actions/workflows/main.yml/badge.svg)](https://github.com/VekRest/vekrest-vekproducer-modulo4.0/actions/workflows/main.yml)
 
 ---
 
@@ -322,10 +324,10 @@ git push origin <version>
 
 ## Postman Collection
 
-> Link para download da coleção Postman utilizada nos testes da API: [Postman Collection VekRest](https://web.postman.co/workspace/My-Workspace~e702bcc2-18e9-41e7-86d7-21df963c99df/folder/33703402-f59218e7-8804-436c-8866-2693c75b9eb6?action=share&source=copy-link&creator=33703402&ctx=documentation)
+> Link para download da coleção Postman utilizada nos testes da API: [Postman Collection VekRest](https://www.postman.com/aviation-pilot-88658184/workspace/my-workspace/folder/33703402-dad9baf5-9c1b-4010-a4c7-7ace385191fd?action=share&source=copy-link&creator=33703402&ctx=documentation)
 
 > Alternativamente, você pode utilizar o Swagger UI para testar a API:
-[Swagger UI VekRest VekProducer Módulo 4](http://localhost:8083/vekrest/vekproducer/v1/swagger-ui/index.html) (rodando localmente)
+[Swagger UI VekRest VekProducer Módulo 4](http://localhost:8083/vekrest/vekproducer/swagger-ui/index.html) (rodando localmente)
 
 ---
 
