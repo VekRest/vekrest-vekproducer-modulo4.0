@@ -9,7 +9,7 @@
 
 	<name>vekproducer</name>
 	<description>VekMódulo de Producer Kafka com Endpoint Rest</description>
-	<url>https://github.com/VekRest/vekrest-vekproducer-modulo4</url>
+	<url>https://github.com/VekRest/vekrest-vekproducer-modulo4.0</url>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -113,7 +113,7 @@
 		<repository>
 			<id>github</id>
 			<name>GitHub Packages</name>
-			<url>https://maven.pkg.github.com/VekRest/vekrest-vekproducer-modulo4</url>
+			<url>https://maven.pkg.github.com/VekRest/vekrest-vekproducer-modulo4.0</url>
 		</repository>
 	</distributionManagement>
 </project>
