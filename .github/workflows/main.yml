@@ -160,6 +160,35 @@ jobs:
           server-id: github
           settings-path: ${{ github.workspace }}
 
+      - name: Delete existing package version (if exists)
+        env:
+          GH_OWNER: ${{ github.repository_owner }}
+          GH_REPO: ${{ github.repository }}
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.ref_name }}
+        run: |
+          echo "Checking for package version: $TAG"
+          
+          PACKAGE_NAMESPACE="com.vekrest.vekproducer"     
+          PACKAGE_NAME="vekproducer"        
+          
+          API_URL="https://api.github.com/orgs/$GH_OWNER/packages/maven/$PACKAGE_NAMESPACE.$PACKAGE_NAME/versions"
+          
+          # Obtém ID da versão com o nome da tag
+          VERSION_ID=$(curl -s -H "Authorization: Bearer $GH_TOKEN" "$API_URL" \
+            | jq ".[] | select(.name==\"$TAG\") | .id")
+          
+          if [ -n "$VERSION_ID" ]; then
+            echo "Existing version found (ID: $VERSION_ID). Deleting..."
+            curl -X DELETE \
+              -H "Authorization: Bearer $GH_TOKEN" \
+              "https://api.github.com/orgs/$GH_OWNER/packages/maven/$PACKAGE_NAMESPACE.$PACKAGE_NAME/versions/$VERSION_ID"
+            echo "Version deleted."
+          else
+            echo "No existing version for tag $TAG"
+          fi
+
+
       - name: Build with Maven  (with tests)
         run: mvn -B package --file pom.xml
 
