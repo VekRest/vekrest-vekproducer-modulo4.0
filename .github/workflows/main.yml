@@ -7,7 +7,7 @@ on:
 
 
 jobs:
-  ci:
+  main-template:
     uses: VekRest/workflow-templates/.github/workflows/main-template.yml@main
     with:
       sonar_project_key: vekproducer
