@@ -4,7 +4,7 @@ Producer VekRest: producer kafka via Spring Boot com Docker e Maven. **Módulo 4
 
 > ATENÇÃO: VÁ ATÉ OS REPOSITÓRIOS DAS PARTES DO MÓDULO 4 E SIGA AS INSTRUÇÕES DE EXECUÇÃO DO README DE CADA APLICAÇÃO PARA RODAR A APLICAÇÃO COMPLETA!
 
-## 🧩 PARTES DO MÓDULO 2
+## 🧩 PARTES DO MÓDULO 4
 | Aplicação      | Descrição                              | Link                              |
 |----------------|----------------------------------------|-----------------------------------|
 | VekProducer    | Producer (este projeto) - Producer Kafka | Este Repositório |
