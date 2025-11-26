@@ -8,10 +8,10 @@ Producer VekRest: producer kafka via Spring Boot com Docker e Maven. **Módulo 4
 | Aplicação      | Descrição                              | Link                              |
 |----------------|----------------------------------------|-----------------------------------|
 | VekProducer    | Producer (este projeto) - Producer Kafka | Este Repositório |
-| VekConsumer    | Consumer - Consumer Kafka simples    | [Repositório VekConsumer Módulo 4](https://github.com/VekRest/vekrest-vekconsumer1-modulo4.1)
+| VekConsumer    | Consumer - Consumer Kafka simples    | [Repositório VekConsumer Módulo 4](https://github.com/VekRest/vekrest-vekconsumer-modulo4.1)
 | VekConsumerAPI | Consumer REST - Consumer Kafka com API REST | [Repositório VekConsumerRest Módulo 4](https://github.com/VekRest/vekrest-vekconsumerapi-modulo4.2)
 
-> Este projeto depende das outras duas aplicações (VekConsumer1 e VekConsumerAPI) para funcionar corretamente.
+> Este projeto depende das outras duas aplicações (VekConsumer e VekConsumerAPI) para funcionar corretamente.
 > Faça o build no docker das outras aplicações ou utilize as imagens do DockerHub para rodar os containers necessários.
 > Por último, suba os containers deste projeto (VekGateway) para completar o ambiente.
 
